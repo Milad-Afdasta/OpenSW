@@ -1,0 +1,5 @@
+# A local-only Linux/OpenSSH fixture for the installer transport contract.
+FROM docker:cli@sha256:2357639ad1ea7d0194134bf3292622fd4e562483966ed674e5d7c945b5f3b28d
+RUN apk add --no-cache openssh-server && mkdir -p /root/.ssh && chmod 700 /root/.ssh && passwd -d root && printf '%s\n' 'PasswordAuthentication no' 'KbdInteractiveAuthentication no' 'PermitRootLogin prohibit-password' >> /etc/ssh/sshd_config
+EXPOSE 22
+CMD ["sh", "-ec", "ssh-keygen -A && exec /usr/sbin/sshd -D -e"]

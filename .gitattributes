@@ -1,0 +1,2 @@
+# Preserve upstream license text formatting.
+web/public/third-party-notices.txt -whitespace

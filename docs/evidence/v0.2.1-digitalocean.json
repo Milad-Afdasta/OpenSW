@@ -1,0 +1,513 @@
+{
+  "release": "v0.2.1",
+  "date": "2026-11-09",
+  "model": "OPENSW-DO-R3",
+  "scope": "Real DigitalOcean public-IPv4 source installation and host-loss recovery; no DNS alias/private CA/certificate bypass",
+  "provider": {
+    "region": "nyc3",
+    "image": "ubuntu-24-04-x64",
+    "docker_server": "29.9.3",
+    "application_droplet": {
+      "vcpus": 2,
+      "memory_mib": 4096,
+      "disk_gb": 80
+    },
+    "storage_droplet": {
+      "vcpus": 1,
+      "memory_mib": 2048,
+      "disk_gb": 50
+    },
+    "temporary_droplets_created": 10,
+    "maximum_live_droplets": 6,
+    "off_app_host_storage": "pinned Garage2.5.0 with publicly trusted IP HTTPS; not a DigitalOcean Spaces-specific test"
+  },
+  "source": {
+    "base_commit": "19d2c33102bc8aab200350c8d933db865023b653",
+    "application_context_sha256": "2088f195aad7d5d219fcf33e9149557ffe54545515d4eb94b18a64b7817531bf",
+    "tested_file_sha256": {
+      "tools/gateway.py": "80c68bf214f9d73c44b4089d5bee64d18535de4473f9cd7b3d821bcef2511861",
+      "tools/install.py": "5b68cc41db0857fa327166a9ab02b14e49b71cff1aaa09b70b7eecfeeabd2af2",
+      "tests/browser/production.spec.cjs": "7bf9043d114fd3d947c348b29c8def39d2ef51269feb5c05a2f1e96856de76b3",
+      "tests/test_gateway.py": "b38b4eca61d45a5facee0f7c1d0bca5b673378daefff39bcd355be7b203895f7"
+    },
+    "application_catalog_version": "0.2.0"
+  },
+  "validation": {
+    "local_pytest_passed": 285,
+    "canonical_cloud_browser_cases_accepted": 72,
+    "initial_cloud_browser_passes": 71,
+    "initial_cloud_browser_harness_failures": 1,
+    "corrected_affected_case_rerun_passes": 1,
+    "recovered_cloud_browser_passes": 16,
+    "all_app_required_routes": 64,
+    "initial_api_assertions": 146,
+    "independently_inspected_populated_views": 16
+  },
+  "apps": [
+    {
+      "app": "files",
+      "initial_install_seconds": 398.663,
+      "api": {
+        "required_routes": 16,
+        "passed_routes": 16,
+        "checks": {
+          "PASS": 40,
+          "FAIL": 0,
+          "BLOCKED": 0
+        }
+      },
+      "browser": {
+        "canonical_cases": 8,
+        "accepted": 8,
+        "initial_harness_failures": 0,
+        "corrected_case_rerun_pass": false,
+        "desktop_mobile_light_dark": true,
+        "independent_screenshot_inspection": true
+      },
+      "public_access": {
+        "ip": "64.225.26.136",
+        "normal_tls_verified": true,
+        "tls_version": "TLSv1.3",
+        "certificate_sha256": "3cae741d332c7bc336453a4cb23aff6f68c7bfcbb9f3beaa79b4e8226e8000ff",
+        "certificate_ip_san": [
+          [
+            "IP Address",
+            "64.225.26.136"
+          ]
+        ],
+        "certificate_not_after": "Nov 16 06:48:02 2026 GMT",
+        "http_redirect": 308,
+        "internal_ports_unreachable": {
+          "8000": true,
+          "8081": true,
+          "8082": true,
+          "8083": true,
+          "8084": true,
+          "2019": true,
+          "2375": true,
+          "2376": true,
+          "3900": true
+        }
+      },
+      "source_image_id": "sha256:210c81fd57407c50884bd0d88e1a8922ae7ede6bea13028bcb0a583d68ff1936",
+      "retention": {
+        "same_container": true,
+        "same_image": true,
+        "app_stopped": true,
+        "worker_stopped": true,
+        "source_engine": "88d78c9f-d8f0-4420-bc06-6f21a8d85221"
+      },
+      "backup": {
+        "snapshot": "cd0a6dd2346c155732313ff1f46bd550ac6bb00ea5d2639034db15c7983709ac",
+        "source_sha256": "2088f195aad7d5d219fcf33e9149557ffe54545515d4eb94b18a64b7817531bf",
+        "seconds": 19.477,
+        "encrypted_off_app_host": true,
+        "initial_full_restore_validation_passed": true
+      },
+      "recovery": {
+        "app": "files",
+        "status": "pass",
+        "source_droplet": 617462352,
+        "recovery_droplet": 617468814,
+        "source_engine": "88d78c9f-d8f0-4420-bc06-6f21a8d85221",
+        "recovery_engine": "6ee3baab-cbe7-4343-833b-4020d834b401",
+        "snapshot": "cd0a6dd2346c155732313ff1f46bd550ac6bb00ea5d2639034db15c7983709ac",
+        "image_id": "sha256:9dfdd255d716cb4b439b5eb594d6cc3f7b8360bdf975b0ebb1b041aef4ad61e0",
+        "schema_equal": true,
+        "integrity": "ok",
+        "foreign_keys": "ok",
+        "exact_original_rows": {
+          "files": 20,
+          "metadata": 2,
+          "users": 11
+        },
+        "exact_original_blobs": 11,
+        "captured_sessions_revoked": 17,
+        "command_seconds": 223.158,
+        "selected_record_oracle": "pass",
+        "explicit_captured_cookie_status": 401,
+        "standalone_verify_sh_pass": true,
+        "browser_cases": 4,
+        "browser_pass": true,
+        "normal_ip_tls": true
+      }
+    },
+    {
+      "app": "projects",
+      "initial_install_seconds": 156.461,
+      "api": {
+        "required_routes": 18,
+        "passed_routes": 18,
+        "checks": {
+          "PASS": 36,
+          "FAIL": 0,
+          "BLOCKED": 0
+        }
+      },
+      "browser": {
+        "canonical_cases": 28,
+        "accepted": 28,
+        "initial_harness_failures": 0,
+        "corrected_case_rerun_pass": false,
+        "desktop_mobile_light_dark": true,
+        "independent_screenshot_inspection": true
+      },
+      "public_access": {
+        "ip": "159.65.175.222",
+        "normal_tls_verified": true,
+        "tls_version": "TLSv1.3",
+        "certificate_sha256": "3cbb891c30c2876f2f887ae49b6e013d3cb58caca7e941af09144af9ca1ba0f6",
+        "certificate_ip_san": [
+          [
+            "IP Address",
+            "159.65.175.222"
+          ]
+        ],
+        "certificate_not_after": "Nov 16 06:43:47 2026 GMT",
+        "http_redirect": 308,
+        "internal_ports_unreachable": {
+          "8000": true,
+          "8081": true,
+          "8082": true,
+          "8083": true,
+          "8084": true,
+          "2019": true,
+          "2375": true,
+          "2376": true,
+          "3900": true
+        }
+      },
+      "source_image_id": "sha256:e7b1ccd3b3b8ad7bf0f510189299c95fade9f27400b3f0945389a3684454d2fb",
+      "retention": {
+        "same_container": true,
+        "same_image": true,
+        "app_stopped": true,
+        "worker_stopped": true,
+        "source_engine": "e86c37d2-6a87-43ca-b145-70419232cd14"
+      },
+      "backup": {
+        "snapshot": "38bfadbb6ae8c575e9547440c00a914fd97e9f71bfb2a724271d3f565d5bbe80",
+        "source_sha256": "2088f195aad7d5d219fcf33e9149557ffe54545515d4eb94b18a64b7817531bf",
+        "seconds": 21.735,
+        "encrypted_off_app_host": true,
+        "initial_full_restore_validation_passed": true
+      },
+      "recovery": {
+        "app": "projects",
+        "status": "pass",
+        "source_droplet": 617462363,
+        "recovery_droplet": 617463971,
+        "source_engine": "e86c37d2-6a87-43ca-b145-70419232cd14",
+        "recovery_engine": "6c343095-00e7-4407-a997-f182add42889",
+        "snapshot": "38bfadbb6ae8c575e9547440c00a914fd97e9f71bfb2a724271d3f565d5bbe80",
+        "image_id": "sha256:6fe1516c01598a54714a79fc5309a62871857889b4f95ab96070f7c38997ef05",
+        "schema_equal": true,
+        "integrity": "ok",
+        "foreign_keys": "ok",
+        "exact_original_rows": {
+          "comments": 12,
+          "metadata": 2,
+          "projects": 836,
+          "task_priorities": 3,
+          "task_statuses": 3,
+          "tasks": 16,
+          "users": 9
+        },
+        "exact_original_blobs": 0,
+        "captured_sessions_revoked": 18,
+        "command_seconds": 167.959,
+        "selected_record_oracle": "pass",
+        "explicit_captured_cookie_status": 401,
+        "standalone_verify_sh_pass": true,
+        "browser_cases": 4,
+        "browser_pass": true,
+        "normal_ip_tls": true
+      }
+    },
+    {
+      "app": "notes",
+      "initial_install_seconds": 160.769,
+      "api": {
+        "required_routes": 12,
+        "passed_routes": 12,
+        "checks": {
+          "PASS": 30,
+          "FAIL": 0,
+          "BLOCKED": 0
+        }
+      },
+      "browser": {
+        "canonical_cases": 8,
+        "accepted": 8,
+        "initial_harness_failures": 0,
+        "corrected_case_rerun_pass": false,
+        "desktop_mobile_light_dark": true,
+        "independent_screenshot_inspection": true
+      },
+      "public_access": {
+        "ip": "64.225.11.255",
+        "normal_tls_verified": true,
+        "tls_version": "TLSv1.3",
+        "certificate_sha256": "409402bf1d234fd25c42634a4418134c8e407a1477251c1940f0404a80b4f073",
+        "certificate_ip_san": [
+          [
+            "IP Address",
+            "64.225.11.255"
+          ]
+        ],
+        "certificate_not_after": "Nov 16 06:43:50 2026 GMT",
+        "http_redirect": 308,
+        "internal_ports_unreachable": {
+          "8000": true,
+          "8081": true,
+          "8082": true,
+          "8083": true,
+          "8084": true,
+          "2019": true,
+          "2375": true,
+          "2376": true,
+          "3900": true
+        }
+      },
+      "source_image_id": "sha256:99fd73d9bb6c13a9444eb60de77245eb02a03ddb0ddfbe1352304e749e486f1d",
+      "retention": {
+        "same_container": true,
+        "same_image": true,
+        "app_stopped": true,
+        "worker_stopped": true,
+        "source_engine": "d02f0f72-7d9e-4937-b9f5-b7a8cd4c0873"
+      },
+      "backup": {
+        "snapshot": "62eab7ec7363248d0a4375274dffbff9a8971b42531480f390230c8051cd2ef1",
+        "source_sha256": "2088f195aad7d5d219fcf33e9149557ffe54545515d4eb94b18a64b7817531bf",
+        "seconds": 20.12,
+        "encrypted_off_app_host": true,
+        "initial_full_restore_validation_passed": true
+      },
+      "recovery": {
+        "app": "notes",
+        "status": "pass",
+        "source_droplet": 617462376,
+        "recovery_droplet": 617466790,
+        "source_engine": "d02f0f72-7d9e-4937-b9f5-b7a8cd4c0873",
+        "recovery_engine": "39b3d4b2-2440-47ef-af9d-ff3baa26771d",
+        "snapshot": "62eab7ec7363248d0a4375274dffbff9a8971b42531480f390230c8051cd2ef1",
+        "image_id": "sha256:49ad1019daaefd86f590a1c9f40e0cd044b7439543b9bb04adcadb8d0b7f5d06",
+        "schema_equal": true,
+        "integrity": "ok",
+        "foreign_keys": "ok",
+        "exact_original_rows": {
+          "metadata": 2,
+          "notes": 8,
+          "users": 9
+        },
+        "exact_original_blobs": 0,
+        "captured_sessions_revoked": 14,
+        "command_seconds": 176.755,
+        "selected_record_oracle": "pass",
+        "explicit_captured_cookie_status": 401,
+        "standalone_verify_sh_pass": true,
+        "browser_cases": 4,
+        "browser_pass": true,
+        "normal_ip_tls": true
+      }
+    },
+    {
+      "app": "chat",
+      "initial_install_seconds": 150.227,
+      "api": {
+        "required_routes": 18,
+        "passed_routes": 18,
+        "checks": {
+          "PASS": 40,
+          "FAIL": 0,
+          "BLOCKED": 0
+        }
+      },
+      "browser": {
+        "canonical_cases": 28,
+        "accepted": 28,
+        "initial_harness_failures": 1,
+        "corrected_case_rerun_pass": true,
+        "desktop_mobile_light_dark": true,
+        "independent_screenshot_inspection": true
+      },
+      "public_access": {
+        "ip": "174.138.66.82",
+        "normal_tls_verified": true,
+        "tls_version": "TLSv1.3",
+        "certificate_sha256": "c12cb9c020f594cd9a19406a243e28d18c6b96632ea8f3c13c3528dec676e7e9",
+        "certificate_ip_san": [
+          [
+            "IP Address",
+            "174.138.66.82"
+          ]
+        ],
+        "certificate_not_after": "Nov 16 06:43:40 2026 GMT",
+        "http_redirect": 308,
+        "internal_ports_unreachable": {
+          "8000": true,
+          "8081": true,
+          "8082": true,
+          "8083": true,
+          "8084": true,
+          "2019": true,
+          "2375": true,
+          "2376": true,
+          "3900": true
+        }
+      },
+      "source_image_id": "sha256:080922b0cb34db038ee0e74908c3bf0e809a8b8338dcfafa42daef82da8a5a82",
+      "retention": {
+        "same_container": true,
+        "same_image": true,
+        "app_stopped": true,
+        "worker_stopped": true,
+        "source_engine": "0d51e511-6048-474f-886e-dde0693487c5"
+      },
+      "backup": {
+        "snapshot": "8e4d97fa0b12c97995cc074d49d34b1404734b8a8fce7bee6a292bc9d6892923",
+        "source_sha256": "2088f195aad7d5d219fcf33e9149557ffe54545515d4eb94b18a64b7817531bf",
+        "seconds": 20.876,
+        "encrypted_off_app_host": true,
+        "initial_full_restore_validation_passed": true
+      },
+      "recovery": {
+        "app": "chat",
+        "status": "pass",
+        "source_droplet": 617462382,
+        "recovery_droplet": 617473919,
+        "source_engine": "0d51e511-6048-474f-886e-dde0693487c5",
+        "recovery_engine": "d097f055-e978-45a0-b190-bf6f0cb2bad0",
+        "snapshot": "8e4d97fa0b12c97995cc074d49d34b1404734b8a8fce7bee6a292bc9d6892923",
+        "image_id": "sha256:b7eb0d4643d00cf3bbffafa5c20601d91372a97f3dfcad5c99314ad134248a53",
+        "schema_equal": true,
+        "integrity": "ok",
+        "foreign_keys": "ok",
+        "exact_original_rows": {
+          "conversations": 502,
+          "messages": 13,
+          "metadata": 2,
+          "read_markers": 12,
+          "users": 13
+        },
+        "exact_original_blobs": 0,
+        "captured_sessions_revoked": 20,
+        "command_seconds": 165.768,
+        "selected_record_oracle": "pass",
+        "explicit_captured_cookie_status": 401,
+        "standalone_verify_sh_pass": true,
+        "browser_cases": 4,
+        "browser_pass": true,
+        "normal_ip_tls": true
+      }
+    }
+  ],
+  "cleanup": {
+    "status": "pass",
+    "completed_at": "2026-11-09T16:36:45.206453+00:00",
+    "droplets": [
+      {
+        "role": "storage",
+        "id": 617462340,
+        "get_404": true
+      },
+      {
+        "role": "files",
+        "id": 617462352,
+        "get_404": true
+      },
+      {
+        "role": "projects",
+        "id": 617462363,
+        "get_404": true
+      },
+      {
+        "role": "notes",
+        "id": 617462376,
+        "get_404": true
+      },
+      {
+        "role": "chat",
+        "id": 617462382,
+        "get_404": true
+      },
+      {
+        "role": "recovery-projects",
+        "id": 617463971,
+        "get_404": true
+      },
+      {
+        "role": "recovery-notes",
+        "id": 617466790,
+        "get_404": true
+      },
+      {
+        "role": "recovery-files",
+        "id": 617468814,
+        "get_404": true
+      },
+      {
+        "role": "recovery-chat",
+        "id": 617470797,
+        "get_404": true
+      },
+      {
+        "role": "recovery-chat-2",
+        "id": 617473919,
+        "get_404": true
+      }
+    ],
+    "ancillary": {
+      "firewall_deleted_get404": true,
+      "ssh_key_deleted_get404": true,
+      "tag_deleted_get404": true
+    },
+    "baseline": {
+      "droplets": {
+        "preexisting_count": 5,
+        "all_preexisting_ids_remain": true,
+        "task_owned_remaining": 0
+      },
+      "keys": {
+        "preexisting_count": 5,
+        "all_preexisting_ids_remain": true,
+        "task_owned_remaining": 0
+      },
+      "firewalls": {
+        "preexisting_count": 2,
+        "all_preexisting_ids_remain": true,
+        "task_owned_remaining": 0
+      },
+      "volumes": {
+        "preexisting_count": 0,
+        "all_preexisting_ids_remain": true,
+        "task_owned_remaining": 0
+      }
+    },
+    "provider_backups_snapshots_volumes_reserved_ips_spaces_created": false,
+    "prorated_vm_estimate_usd": 0.1784,
+    "estimate_scope": "API hourly rates times observed lifetime; not a final invoice/tax or provider minimum calculation",
+    "cleanup_proof_note": "Current doctl emits structured not-found errors on stdout. Post-delete absence is independently confirmed; no deletion was replayed."
+  },
+  "observations": [
+    "One Files initial certificate required existing Caddy/ACME owner retries after authorization/finalization protocol errors; same pinned client succeeded without manual retry/restart. Provider-internal root cause unestablished.",
+    "One Chat browser helper awaited an absent final-page Load more button. The confirmed rows were already present; corrected DOM-append wait passed the affected case without changing app assertions.",
+    "A private Files fixture initially used active-detail GET for Trash and received the correct404; it was corrected to query the Trash list in a new namespace. Completed fixtures were retained until host destruction.",
+    "One assigned Chat recovery IP was intercepted by the controller network (HTTP302 SafeBrowse on port443) while normal server-side loopback/public-IP TLS passed. Before any app restore, the exact installer wait was cancelled, absence of app/data/locks rechecked, that unused host destroyed, and a single separately recorded fresh-IP host used. No filter or TLS checks were disabled.",
+    "Private cloud readiness initially read an asynchronous new Droplet network before active; corrected ordering reused the same recorded resource with no create replay."
+  ],
+  "limits": [
+    "This is a setup/recovery test, not a new DigitalOcean concurrent-user capacity benchmark.",
+    "Natural160-hour IP certificate renewal was not observed during the short run; controlled renewal proof remains in v0.2.0 evidence.",
+    "Chromium desktop/mobile viewport checks do not establish physical-device/Safari certification.",
+    "Do not probe historical public IPs: the test Droplets were destroyed and their IPs released."
+  ],
+  "totals": {
+    "exact_original_non_session_rows": 1475,
+    "exact_original_blobs": 11,
+    "captured_sessions_revoked": 69,
+    "referenced_blob_bytes": 2113837,
+    "trashed_file_blobs": 9
+  }
+}

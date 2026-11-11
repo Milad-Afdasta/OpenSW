@@ -1,0 +1,44 @@
+# OpenSW Chat — simple setup
+# Start with these defaults to run on this computer.
+app = "chat"
+team_name = "My team"
+run_on = "this-computer"
+
+# For an existing server, set run_on = "my-server" and fill in these details.
+# Use an IP address or hostname, without https://. Keep all three blank for local use.
+server_address = ""
+server_username = ""
+server_key_file = "" # Path to your SSH private key; blank uses your SSH agent.
+
+# OPTIONAL: remove the # marks below only when you need to change a default.
+# [advanced]
+# instance_name = "team" # A separate installation name; use lowercase letters/numbers/hyphens.
+# port = 8084 # Change if another program uses this port.
+# ssh_port = 22 # Your server's SSH port.
+
+# PUBLIC HTTPS: enable both optional sections for an existing authorized server.
+# Use your server public IPv4 (one app/server), or a DNS hostname pointing to it.
+# Allow incoming TCP 80 and 443. IP certificates renew automatically every few days.
+# [https]
+# domain = "chat.example.com"
+# email = "admin@example.com"
+# Certificates are issued and renewed automatically. Advanced organizational/test
+# settings: acme_server = "https://acme.example.com/directory", ca_file = "/private/root-ca.pem"
+# http_port = 80
+# port = 443
+# dns_resolvers = ["1.1.1.1"] # Same gateway DNS IPs for apps on this host; port 53
+
+# Encrypted off-host backups are required for public HTTPS readiness.
+# Use your existing S3-compatible HTTPS bucket; each app/instance gets its own prefix.
+# [backups]
+# repository = "s3:https://storage.example.com/my-backup-bucket"
+# credentials_file = "/private/storage-credentials.env" # chmod 600; no shell commands
+# password_file = "/private/recovery-password.txt" # chmod 600; keep a safe separate copy
+# every_hours = 6
+# retain_days = 30
+# verify_every_days = 7 # Full authenticated restore validation; includes the first backup
+# ca_file = "/private/storage-root-ca.pem" # Only for an explicitly trusted private CA
+# credentials_file contains exactly AWS_ACCESS_KEY_ID=... and AWS_SECRET_ACCESS_KEY=...
+# Optional AWS_SESSION_TOKEN=..., AWS_DEFAULT_REGION=... and AWS_REGION=... are supported.
+# Configure first, then use ./install.sh upgrade --config YOUR_FILE to promote an
+# existing private installation; ordinary install preserves its existing image.

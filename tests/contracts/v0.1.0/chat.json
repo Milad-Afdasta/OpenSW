@@ -1,0 +1,212 @@
+{
+  "config": {
+    "app": "chat",
+    "instance_name": "retained",
+    "team_name": "Synthetic released fixture",
+    "public_url": "http://testserver",
+    "max_upload_mb": 1
+  },
+  "responses": [
+    {
+      "actor": "bob",
+      "path": "/api/chat/channels",
+      "json": {
+        "items": [
+          {
+            "id": 1,
+            "kind": "channel",
+            "name": "general",
+            "peer": null,
+            "unread_count": 0
+          },
+          {
+            "id": 2,
+            "kind": "channel",
+            "name": "retained",
+            "peer": null,
+            "unread_count": 1
+          }
+        ],
+        "next_cursor": null
+      }
+    },
+    {
+      "actor": "bob",
+      "path": "/api/chat/dms",
+      "json": {
+        "items": [
+          {
+            "id": 3,
+            "kind": "dm",
+            "name": "Alice",
+            "peer": {
+              "id": 2,
+              "username": "alice",
+              "display_name": "Alice",
+              "role": "member",
+              "active": false
+            },
+            "unread_count": 0
+          }
+        ],
+        "next_cursor": null
+      }
+    },
+    {
+      "actor": "bob",
+      "path": "/api/chat/conversations/2/messages",
+      "json": {
+        "items": [
+          {
+            "id": 1,
+            "conversation_id": 2,
+            "author_id": 2,
+            "body": "Retained channel authorship ☃",
+            "deleted": false,
+            "edited_at": null,
+            "created_at": "2026-11-09T00:48:10.740+00:00"
+          }
+        ],
+        "has_more": false
+      }
+    },
+    {
+      "actor": "bob",
+      "path": "/api/chat/conversations/3/messages",
+      "json": {
+        "items": [
+          {
+            "id": 2,
+            "conversation_id": 3,
+            "author_id": 2,
+            "body": "Edited private text 🌍",
+            "deleted": false,
+            "edited_at": "2026-11-09T00:48:10.749+00:00",
+            "created_at": "2026-11-09T00:48:10.746+00:00"
+          },
+          {
+            "id": 3,
+            "conversation_id": 3,
+            "author_id": 2,
+            "body": "",
+            "deleted": true,
+            "edited_at": "2026-11-09T00:48:10.754+00:00",
+            "created_at": "2026-11-09T00:48:10.751+00:00"
+          },
+          {
+            "id": 4,
+            "conversation_id": 3,
+            "author_id": 3,
+            "body": "Retained reply",
+            "deleted": false,
+            "edited_at": null,
+            "created_at": "2026-11-09T00:48:10.756+00:00"
+          }
+        ],
+        "has_more": false
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/users",
+      "json": {
+        "items": [
+          {
+            "id": 1,
+            "username": "admin",
+            "display_name": "Administrator",
+            "role": "admin",
+            "active": true
+          },
+          {
+            "id": 2,
+            "username": "alice",
+            "display_name": "Alice",
+            "role": "member",
+            "active": false
+          },
+          {
+            "id": 3,
+            "username": "bob",
+            "display_name": "Bob",
+            "role": "member",
+            "active": true
+          }
+        ],
+        "next_cursor": null
+      }
+    }
+  ],
+  "details": [
+    {
+      "actor": "bob",
+      "path": "/api/chat/conversations/1",
+      "json": {
+        "id": 1,
+        "kind": "channel",
+        "name": "general",
+        "peer": null,
+        "unread_count": 0
+      }
+    },
+    {
+      "actor": "bob",
+      "path": "/api/chat/conversations/2",
+      "json": {
+        "id": 2,
+        "kind": "channel",
+        "name": "retained",
+        "peer": null,
+        "unread_count": 1
+      }
+    },
+    {
+      "actor": "bob",
+      "path": "/api/chat/conversations/3",
+      "json": {
+        "id": 3,
+        "kind": "dm",
+        "name": "Alice",
+        "peer": {
+          "id": 2,
+          "username": "alice",
+          "display_name": "Alice",
+          "role": "member",
+          "active": false
+        },
+        "unread_count": 0
+      }
+    }
+  ],
+  "rejections": [
+    {
+      "actor": "admin",
+      "method": "GET",
+      "path": "/api/chat/conversations/3",
+      "status": 404
+    },
+    {
+      "actor": "admin",
+      "method": "GET",
+      "path": "/api/chat/conversations/3/messages",
+      "status": 404
+    },
+    {
+      "actor": "bob",
+      "method": "POST",
+      "path": "/api/chat/conversations/3/messages",
+      "json": {
+        "body": "Disabled peer cannot receive"
+      },
+      "status": 409
+    }
+  ],
+  "blobs": {},
+  "read_markers": [
+    {
+      "conversation_id": 3,
+      "user_id": 3,
+      "message_id": 4
+    }
+  ]
+}

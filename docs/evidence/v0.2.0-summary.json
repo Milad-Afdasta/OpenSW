@@ -1,0 +1,244 @@
+{
+  "format": 1,
+  "release": "v0.2.0",
+  "deployment_model": "OPENSW-PRODUCTION-R13",
+  "immutable_measured_workload_profile": "OPENSW-PRODUCTION-R11",
+  "app_source_context_sha256": "ee6d57740ea5d10735d18f7ac38bab7ce276132b65c7aa1a61461c89878b08d2",
+  "distribution": "Source-only; no verified prebuilt OpenSW images are distributed.",
+  "local_automated_tests": {
+    "passed": 282,
+    "failed": 0
+  },
+  "browser": {
+    "current_matrix": 72,
+    "frozen_v010_client_against_current_api": 16,
+    "clean_host_recovery": 16,
+    "viewport_themes": [
+      "desktop-light",
+      "desktop-dark",
+      "mobile-light",
+      "mobile-dark"
+    ],
+    "engine": "Chromium, normal certificate and hostname validation"
+  },
+  "manual_qa": {
+    "independent_reviewers": 3,
+    "each_reviewer_all_app_view_cases": 16,
+    "each_reviewer_affected_projects_followup_cases": 4,
+    "verdict": "APPROVE OPENSW-PRODUCTION-R13"
+  },
+  "host": {
+    "architecture": "aarch64",
+    "server": "Linux Docker Desktop VM, nested Docker Engine28.3.2",
+    "inclusive_parent_cpu_limit": 4,
+    "inclusive_parent_memory_limit_bytes": 6442450944,
+    "clients_ca_storage_outside_parent_quota": true,
+    "network": "Controlled local network; explicit private CA. No provider WAN or public ACME issuance claim."
+  },
+  "workload": {
+    "runner_sha256": "58ada7f34048312e5aec8ef1b4bd13c26c6222353b3a50ee71113edb6eebc94a",
+    "raw_report_sha256": "866b12adabd034f042f7a8af335edaa684b4a958dbc41fc8aa916e8a382e1d19",
+    "total_operations": 35068,
+    "measured_stage_operations": 20433,
+    "stages": [
+      {
+        "name": "ramp10",
+        "users_per_app": 10,
+        "actual_seconds": 30.00309
+      },
+      {
+        "name": "ramp25",
+        "users_per_app": 25,
+        "actual_seconds": 30.004019
+      },
+      {
+        "name": "steady50",
+        "users_per_app": 50,
+        "actual_seconds": 300.007176
+      },
+      {
+        "name": "burst100",
+        "users_per_app": 100,
+        "actual_seconds": 30.002527
+      },
+      {
+        "name": "recovery10",
+        "users_per_app": 10,
+        "actual_seconds": 45.016736
+      }
+    ],
+    "result": {
+      "passed": true,
+      "capacity_evidence": true,
+      "profile_scope": "Full predeclared workload",
+      "budget_failures": [],
+      "unexpected_operations": 0
+    },
+    "latency": {
+      "read": {
+        "worst_app_stage_p95_ms": 19.782,
+        "worst_app_stage_p99_ms": 24.132,
+        "predeclared_budget_seconds": {
+          "p95": 1.0,
+          "p99": 2.0
+        }
+      },
+      "write": {
+        "worst_app_stage_p95_ms": 21.992,
+        "worst_app_stage_p99_ms": 52.176,
+        "predeclared_budget_seconds": {
+          "p95": 1.5,
+          "p99": 3.0
+        }
+      },
+      "transfer": {
+        "worst_app_stage_p95_ms": 26.706,
+        "worst_app_stage_p99_ms": 37.171,
+        "predeclared_budget_seconds": {
+          "p95": 5.0
+        }
+      },
+      "auth": {
+        "worst_app_stage_p95_ms": 91.565,
+        "worst_app_stage_p99_ms": 93.751,
+        "predeclared_budget_seconds": {
+          "p95": 3.0
+        }
+      }
+    },
+    "recovery_seconds": 0.6074199999999337,
+    "seed_counts": {
+      "files": {
+        "files": 200
+      },
+      "projects": {
+        "tasks": 501
+      },
+      "notes": {
+        "notes": 501
+      },
+      "chat": {
+        "messages": 10000
+      }
+    },
+    "document_payload_utf8_bytes": {
+      "notes.body": 4096,
+      "tasks.description": 1024
+    },
+    "final_owned_resource_counts": {
+      "files": {
+        "users": 101,
+        "files": 606
+      },
+      "projects": {
+        "users": 101,
+        "projects": 2,
+        "tasks": 501,
+        "comments": 1
+      },
+      "notes": {
+        "users": 101,
+        "notes": 501
+      },
+      "chat": {
+        "users": 101,
+        "conversations": 56,
+        "messages": 10755
+      }
+    },
+    "confirmed_version_counts": {
+      "files": 1556,
+      "projects": 1790,
+      "notes": 1774,
+      "chat": 11465
+    },
+    "steady50": {
+      "sample_count": 150,
+      "mean_parent_cpu_cores": 0.5410799041409006,
+      "peak_sampled_parent_memory_bytes": 2849181696,
+      "sampled_parent_cpu_cores": {
+        "count": 149,
+        "p50": 0.477490841638401,
+        "p95": 1.132622575178574,
+        "p99": 2.0198884267361383,
+        "maximum": 2.3727443191404007
+      }
+    },
+    "client": {
+      "python": "3.13.11",
+      "httpx": "0.28.1",
+      "user_cpu_seconds": 87.654071,
+      "system_cpu_seconds": 11.375594,
+      "peak_rss_bytes": 451248128,
+      "persistent_client_per_actor": true,
+      "auth_interval_seconds_per_app": 1.4
+    }
+  },
+  "https": {
+    "actual_acme_http_challenges": true,
+    "automatic_renewal_all_four_hostnames": true,
+    "independent_files_certificate_fingerprint_changed": true,
+    "gateway_restart_all_four_routes": true,
+    "actual_duplicate_load_rejected_preserving_confirmed_routes": true,
+    "injected_durable_publication_failure_detected_by_status": true,
+    "read_reconciliation_without_load_replay": true,
+    "changed_certificate_policy_rejected_readonly": true
+  },
+  "backup_recovery": {
+    "online_capture_during_steady50": {
+      "files": {
+        "snapshot": "bcf65f82ba207840098d3519d86ea8ae0b0dd81a910f526c14a07d2d0448ddcd",
+        "seconds": 10.049729824066162
+      },
+      "projects": {
+        "snapshot": "2f6bae58a276f8d296c0353a042a0314bf9a0e9b9a8f68e2976f943c19628af9",
+        "seconds": 8.213073968887329
+      },
+      "notes": {
+        "snapshot": "01ebfd01947bb129848517da721ace92a84232d7a2744548f89a02fca628cedb",
+        "seconds": 7.401908874511719
+      },
+      "chat": {
+        "snapshot": "6cf98bce28d85bc863520c4bce297fe94ee72acc5c6f74d74b5224aa0f14ca82",
+        "seconds": 7.500777959823608
+      }
+    },
+    "clean_engine_no_preloaded_app_images_or_volumes": true,
+    "source_build_restore_seconds": {
+      "files": 63.05489897727966,
+      "projects": 40.88538908958435,
+      "notes": 40.90313410758972,
+      "chat": 41.16757917404175
+    },
+    "all_64_api_routes_146_checks_passed_after_restore": true,
+    "captured_non_session_rows_preserved": 15840,
+    "original_file_blobs_preserved": 300,
+    "captured_sessions_revoked": 551,
+    "schema_integrity_foreign_keys": "pass",
+    "original_server_all_app_volume_bytes_unchanged": true,
+    "scope": "Recovery to the four selected snapshot points. Later writes are intentionally absent. Chat markers are checked for valid membership/message and monotonic bounds, then exact captured-to-restored rows; no invented marker history."
+  },
+  "runtime_images": {
+    "primary": {
+      "files": "sha256:882234778e4ce1fa5f8bb5771c68c9bac2ee091bcf34a77fc390f82e218e3077",
+      "projects": "sha256:1490d0a2252bd3227bc7203fa5b962b7afb712e3917f2196bd426efd52f16a45",
+      "notes": "sha256:1ba8122a49a0ab813b73a1cf13bf84b76a4961e1a0a8382d0d5bf7df3bd9ca37",
+      "chat": "sha256:868568c1a935233fdbcbe86603f5a13aed628edf56cea5489dcee616335daf78"
+    },
+    "source_built_recovery": {
+      "files": "sha256:8ddcabb6167fedbee19c4d4ec0b5f4e6eb1ca1efedaf911e2295fe3d49e31632",
+      "projects": "sha256:b8421827f0ddfcacb08f20479321a8cd03a064770636c9f764e24ceb0b98adb6",
+      "notes": "sha256:b1127bd15e1ef2cf711dc88bb8374dac99ce97c2a5b16d76810c93a93f6d37af",
+      "chat": "sha256:ee50a33db7ab5746c1c23bb43997fd6e374e2c486b67a2209337dbd1d27ca840"
+    }
+  },
+  "hosted_ci": "Separate public workflow checks bind the released Git commit; see the v0.2.0 release verification asset.",
+  "cleanup": {
+    "active_owned_containers": 0,
+    "owned_outer_service_containers_removed": 8,
+    "owned_network_removed": true,
+    "recovered_browser_sessions_revoked": 16,
+    "offline_evidence_volumes_retained": true,
+    "shared_docker_engine_unchanged": true
+  }
+}

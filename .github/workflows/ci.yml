@@ -1,0 +1,67 @@
+name: Check all OpenSW apps
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  api:
+    name: API, isolation, and schema invariants
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13'
+      - name: Install locked application and test dependencies
+        run: python -m pip install --require-hashes -r backend/requirements-dev.txt
+      - name: Verify all four application contracts
+        env:
+          PYTHONPATH: backend
+        run: python -m pytest -q tests backend/tests
+
+  interface:
+    name: Build ${{ matrix.app }} interface
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [files, projects, notes, chat]
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - name: Build selected independent app
+        env:
+          VITE_OPENSW_APP: ${{ matrix.app }}
+        run: npm run build
+
+  image:
+    name: Build ${{ matrix.app }} source image
+    needs: [api, interface]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [files, projects, notes, chat]
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13'
+      - name: Source install, verify every API route, and restart retained data
+        run: python tests/production/ci_smoke.py --app ${{ matrix.app }}

@@ -1,0 +1,29 @@
+# Local configuration and secrets
+config.toml
+*.local.toml
+.env
+.env.*
+!.env.example
+secrets/
+data/
+*.sqlite3
+*.sqlite3-*
+*.db
+*.pem
+*.key
+*.log
+
+# Development and generated artifacts
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+artifacts/
+.DS_Store

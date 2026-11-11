@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="792pt" height="410.4pt" viewBox="0 0 792 410.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Illustrative annual cost of four paid plans and OpenSW</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Illustrative annual cost of four paid plans and OpenSW</dc:title>
+    <dc:date>2026-11-08T22:20:54.107263</dc:date>
+    <dc:description>50 paid users: subscriptions $25,170; illustrative infrastructure $1,224; infrastructure plus modeled administration $3,024.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 410.4
+L 792 410.4
+L 792 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 253.44 299.592
+L 760.32 299.592
+L 760.32 73.872
+L 253.44 73.872
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 253.44 299.592
+L 253.44 73.872
+" clip-path="url(#pd8574b59dc)" style="fill: none; stroke: #e9ecf2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667085" x="253.44" y="317.950281" transform="rotate(-0 253.44 317.950281)">$0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 343.342946 299.592
+L 343.342946 73.872
+" clip-path="url(#pd8574b59dc)" style="fill: none; stroke: #e9ecf2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667085" x="343.342946" y="317.950281" transform="rotate(-0 343.342946 317.950281)">$5,000</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 433.245891 299.592
+L 433.245891 73.872
+" clip-path="url(#pd8574b59dc)" style="fill: none; stroke: #e9ecf2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667085" x="433.245891" y="317.950281" transform="rotate(-0 433.245891 317.950281)">$10,000</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 523.148837 299.592
+L 523.148837 73.872
+" clip-path="url(#pd8574b59dc)" style="fill: none; stroke: #e9ecf2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667085" x="523.148837" y="317.950281" transform="rotate(-0 523.148837 317.950281)">$15,000</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 613.051783 299.592
+L 613.051783 73.872
+" clip-path="url(#pd8574b59dc)" style="fill: none; stroke: #e9ecf2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667085" x="613.051783" y="317.950281" transform="rotate(-0 613.051783 317.950281)">$20,000</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 702.954728 299.592
+L 702.954728 73.872
+" clip-path="url(#pd8574b59dc)" style="fill: none; stroke: #e9ecf2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667085" x="702.954728" y="317.950281" transform="rotate(-0 702.954728 317.950281)">$25,000</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13"/>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #172033" x="243.44" y="130.39201" transform="rotate(-0 243.44 130.39201)">Four paid plans</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14"/>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #172033" x="243.44" y="195.818097" transform="rotate(-0 243.44 195.818097)">OpenSW: infrastructure</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15"/>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #172033" x="243.44" y="261.244184" transform="rotate(-0 243.44 261.244184)">OpenSW: infrastructure + admin</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 253.44 144.205043
+L 415.265302 144.205043
+L 415.265302 108.220696
+L 253.44 108.220696
+z
+" clip-path="url(#pd8574b59dc)" style="fill: #6554c0"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 415.265302 144.205043
+L 519.912331 144.205043
+L 519.912331 108.220696
+L 415.265302 108.220696
+z
+" clip-path="url(#pd8574b59dc)" style="fill: #9b8ad4"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 519.912331 144.205043
+L 627.795866 144.205043
+L 627.795866 108.220696
+L 519.912331 108.220696
+z
+" clip-path="url(#pd8574b59dc)" style="fill: #c5b9e7"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 627.795866 144.205043
+L 706.011429 144.205043
+L 706.011429 108.220696
+L 627.795866 108.220696
+z
+" clip-path="url(#pd8574b59dc)" style="fill: #e1dbf0"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 253.44 209.63113
+L 275.448241 209.63113
+L 275.448241 173.646783
+L 253.44 173.646783
+z
+" clip-path="url(#pd8574b59dc)" style="fill: #20a58d"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 253.44 275.057217
+L 275.448241 275.057217
+L 275.448241 239.07287
+L 253.44 239.07287
+z
+" clip-path="url(#pd8574b59dc)" style="fill: #20a58d"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 275.448241 275.057217
+L 307.813302 275.057217
+L 307.813302 239.07287
+L 275.448241 239.07287
+z
+" clip-path="url(#pd8574b59dc)" style="fill: #aeb7c7"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 253.44 299.592
+L 760.32 299.592
+" style="fill: none; stroke: #d7dce5; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="712.8" y="129.070721" transform="rotate(-0 712.8 129.070721)">$25,170/yr</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="282.236813" y="194.496808" transform="rotate(-0 282.236813 194.496808)">$1,224/yr</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="314.601873" y="259.922895" transform="rotate(-0 314.601873 259.922895)">$3,024/yr</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_11">
+     <path d="M 89.2008 372.888788
+L 107.2008 372.888788
+L 107.2008 366.588788
+L 89.2008 366.588788
+z
+" style="fill: #6554c0"/>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="114.4008" y="372.888788" transform="rotate(-0 114.4008 372.888788)">Dropbox Standard</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 89.2008 386.389491
+L 107.2008 386.389491
+L 107.2008 380.089491
+L 89.2008 380.089491
+z
+" style="fill: #9b8ad4"/>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="114.4008" y="386.389491" transform="rotate(-0 114.4008 386.389491)">Jira Standard</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 214.129237 372.888788
+L 232.129237 372.888788
+L 232.129237 366.588788
+L 214.129237 366.588788
+z
+" style="fill: #c5b9e7"/>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="239.329237" y="372.888788" transform="rotate(-0 239.329237 372.888788)">Notion Plus</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 214.129237 386.389491
+L 232.129237 386.389491
+L 232.129237 380.089491
+L 214.129237 380.089491
+z
+" style="fill: #e1dbf0"/>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="239.329237" y="386.389491" transform="rotate(-0 239.329237 386.389491)">Slack Pro</text>
+    </g>
+    <g id="patch_15">
+     <path d="M 307.987988 372.888788
+L 325.987988 372.888788
+L 325.987988 366.588788
+L 307.987988 366.588788
+z
+" style="fill: #20a58d"/>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="333.187988" y="372.888788" transform="rotate(-0 333.187988 372.888788)">Example infrastructure</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 307.987988 386.389491
+L 325.987988 386.389491
+L 325.987988 380.089491
+L 307.987988 380.089491
+z
+" style="fill: #aeb7c7"/>
+    </g>
+    <g id="text_18">
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="333.187988" y="386.389491" transform="rotate(-0 333.187988 386.389491)">Modeled administration</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_19">
+   <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="23.76" y="26.749031" transform="rotate(-0 23.76 26.749031)">The economics of owning everyday software</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #667085" x="23.76" y="45.144" transform="rotate(-0 23.76 45.144)">50 paid seats · annualized US reference prices · illustrative OpenSW budget</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #667085" x="23.76" y="400.14" transform="rotate(-0 23.76 400.14)">No feature/storage parity. Admin: 2 h/month × $75. Excludes setup, migration, tax, growth and extra retention.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd8574b59dc">
+   <rect x="253.44" y="73.872" width="506.88" height="225.72"/>
+  </clipPath>
+ </defs>
+</svg>

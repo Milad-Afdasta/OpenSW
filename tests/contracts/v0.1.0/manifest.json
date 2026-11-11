@@ -1,0 +1,79 @@
+{
+  "release": "v0.1.0",
+  "release_commit": "85ac6e2815d740d15c60a89a14f800bc02d63790",
+  "producer": "Actual released opensw.main.create_app via isolated PYTHONPATH subprocess",
+  "synthetic": true,
+  "fixture_password": "The public test-only PASSWORD constant in backend/tests/test_released_contracts.py",
+  "exported_session_cookies": false,
+  "catalog": {
+    "version": "0.1.0",
+    "apps": [
+      {
+        "id": "files",
+        "name": "OpenSW Files",
+        "description": "Your team's files, on your terms.",
+        "port": 8081
+      },
+      {
+        "id": "projects",
+        "name": "OpenSW Projects",
+        "description": "A clear place to move work forward.",
+        "port": 8082
+      },
+      {
+        "id": "notes",
+        "name": "OpenSW Notes",
+        "description": "A simple home for what your team knows.",
+        "port": 8083
+      },
+      {
+        "id": "chat",
+        "name": "OpenSW Chat",
+        "description": "Team conversations without the clutter.",
+        "port": 8084
+      }
+    ],
+    "task_statuses": [
+      {
+        "id": "todo",
+        "label": "To do"
+      },
+      {
+        "id": "doing",
+        "label": "In progress"
+      },
+      {
+        "id": "done",
+        "label": "Done"
+      }
+    ],
+    "task_priorities": [
+      {
+        "id": "low",
+        "label": "Low"
+      },
+      {
+        "id": "normal",
+        "label": "Normal"
+      },
+      {
+        "id": "high",
+        "label": "High"
+      }
+    ]
+  },
+  "sha256": {
+    "chat-openapi.json": "a8a7068ad6475ce2a2548342b00bd906384a0abf869b96f3cbaf165951862415",
+    "chat.json": "378bdb0a0587aea0ef422e7a67ec9b20b65b86178d9267a711b1474ebfbd564e",
+    "chat.sql": "98aefb532d3c58818eac07c339795107d665404c16dec3ad1b8982a806b1d798",
+    "files-openapi.json": "e2eaec1ba38091249e4a6001ef490703994067dd540582e5b19fc4393299f63a",
+    "files.json": "704b6fd413939ae2237e87ce7a9c3c853c51e5ee89673b03db8344875a79594a",
+    "files.sql": "47ff1822c23b48278e8849baf8f4de8d90c2a8b16e35bb087e09c5708244b5f7",
+    "notes-openapi.json": "6ef64604154fac7e5ef7a7171853dd29bc312e68de33b6366b60f1df9da6da3f",
+    "notes.json": "a344270c773174001d9004fcb3e712a25f50ead338a2509a5b7af17f466ef171",
+    "notes.sql": "4909242d36bf900088f2fa7d3bda83650a536786e20e961085492da4ec1db1ac",
+    "projects-openapi.json": "bdf3cfa8b0f289dbd3e40586f880d716a8cbfbec52d2677e00c248ccc50c8589",
+    "projects.json": "c9555fd17e90799f2af0e91a911e62ee55c9e00ca5a16fd857ecbefad0b3ae6c",
+    "projects.sql": "675abde8ed9ebdbeb3d2d1659981ea997a630fbf3399976d8a3f73affe298541"
+  }
+}

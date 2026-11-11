@@ -1,0 +1,34 @@
+# Matches the repository's exact @playwright/test release, on AMD64 and ARM64.
+FROM mcr.microsoft.com/playwright:v1.65.0-noble@sha256:6e3fb709361521eb27161606e6da6d2674e5e89fa16516cb37d6fdd91372273d
+
+RUN apt-get update && apt-get install -y --no-install-recommends libnss3-tools ca-certificates python3 && rm -rf /var/lib/apt/lists/*
+ENV NODE_EXTRA_CA_CERTS=/fixture/ca.pem SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+WORKDIR /repo
+
+# Import the explicit fixture CA into both Linux/system and Chromium's NSS
+# stores. Neither the browser nor its HTTP client disables TLS verification.
+RUN <<'BUILD'
+cat > /usr/local/bin/opensw-browser <<'SCRIPT'
+#!/bin/sh
+set -eu
+python3 - <<'PY'
+from pathlib import Path
+import os,re,subprocess
+bundle=Path('/fixture/ca.pem').read_text()
+certificates=re.findall(r'-----BEGIN CERTIFICATE-----.*?-----END CERTIFICATE-----',bundle,re.S)
+if not certificates: raise RuntimeError('The explicit browser CA bundle is empty')
+nss=Path.home()/'.pki/nssdb'; nss.mkdir(parents=True,exist_ok=True,mode=0o700)
+subprocess.run(['certutil','-N','--empty-password','-d','sql:'+str(nss)],check=True)
+for index,certificate in enumerate(certificates):
+ path=Path('/usr/local/share/ca-certificates')/f'opensw-fixture-{index}.crt'
+ path.write_text(certificate+'\n')
+ subprocess.run(['certutil','-A','-d','sql:'+str(nss),'-n',f'OpenSW explicit fixture CA {index}','-t','C,,','-i',str(path)],check=True)
+subprocess.run(['update-ca-certificates'],check=True)
+PY
+exec "$@"
+SCRIPT
+chmod 755 /usr/local/bin/opensw-browser
+BUILD
+
+ENTRYPOINT ["/usr/local/bin/opensw-browser"]
+CMD ["node", "web/node_modules/@playwright/test/cli.js", "test", "--config", "tests/browser/playwright.config.cjs"]

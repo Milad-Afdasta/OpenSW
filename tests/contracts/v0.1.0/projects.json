@@ -1,0 +1,449 @@
+{
+  "config": {
+    "app": "projects",
+    "instance_name": "retained",
+    "team_name": "Synthetic released fixture",
+    "public_url": "http://testserver",
+    "max_upload_mb": 1
+  },
+  "responses": [
+    {
+      "actor": "admin",
+      "path": "/api/projects",
+      "json": {
+        "items": [
+          {
+            "id": 1,
+            "name": "Current project",
+            "description": "Retained complete project ☃",
+            "archived": false,
+            "created_by": 2,
+            "created_at": "2026-11-09T00:48:10.191+00:00",
+            "updated_at": "2026-11-09T00:48:10.191+00:00"
+          }
+        ],
+        "next_cursor": null
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/projects?archived=true",
+      "json": {
+        "items": [
+          {
+            "id": 2,
+            "name": "Archived project",
+            "description": "Historical project body",
+            "archived": true,
+            "created_by": 2,
+            "created_at": "2026-11-09T00:48:10.194+00:00",
+            "updated_at": "2026-11-09T00:48:10.197+00:00"
+          }
+        ],
+        "next_cursor": null
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/projects/1/tasks",
+      "json": {
+        "items": [
+          {
+            "id": 1,
+            "project_id": 1,
+            "title": "Revision two",
+            "status": "todo",
+            "priority": "low",
+            "assignee_id": 2,
+            "due_date": "2030-01-15",
+            "archived": false,
+            "revision": 2,
+            "created_by": 2,
+            "created_at": "2026-11-09T00:48:10.200+00:00",
+            "updated_at": "2026-11-09T00:48:10.224+00:00"
+          },
+          {
+            "id": 2,
+            "project_id": 1,
+            "title": "todo-normal",
+            "status": "todo",
+            "priority": "normal",
+            "assignee_id": 2,
+            "due_date": "2030-01-15",
+            "archived": false,
+            "revision": 1,
+            "created_by": 2,
+            "created_at": "2026-11-09T00:48:10.202+00:00",
+            "updated_at": "2026-11-09T00:48:10.202+00:00"
+          },
+          {
+            "id": 3,
+            "project_id": 1,
+            "title": "todo-high",
+            "status": "todo",
+            "priority": "high",
+            "assignee_id": 2,
+            "due_date": "2030-01-15",
+            "archived": false,
+            "revision": 1,
+            "created_by": 2,
+            "created_at": "2026-11-09T00:48:10.205+00:00",
+            "updated_at": "2026-11-09T00:48:10.205+00:00"
+          },
+          {
+            "id": 4,
+            "project_id": 1,
+            "title": "doing-low",
+            "status": "doing",
+            "priority": "low",
+            "assignee_id": 2,
+            "due_date": "2030-01-15",
+            "archived": false,
+            "revision": 1,
+            "created_by": 2,
+            "created_at": "2026-11-09T00:48:10.208+00:00",
+            "updated_at": "2026-11-09T00:48:10.208+00:00"
+          },
+          {
+            "id": 5,
+            "project_id": 1,
+            "title": "doing-normal",
+            "status": "doing",
+            "priority": "normal",
+            "assignee_id": 2,
+            "due_date": "2030-01-15",
+            "archived": false,
+            "revision": 1,
+            "created_by": 2,
+            "created_at": "2026-11-09T00:48:10.210+00:00",
+            "updated_at": "2026-11-09T00:48:10.210+00:00"
+          },
+          {
+            "id": 6,
+            "project_id": 1,
+            "title": "doing-high",
+            "status": "doing",
+            "priority": "high",
+            "assignee_id": 2,
+            "due_date": "2030-01-15",
+            "archived": false,
+            "revision": 1,
+            "created_by": 2,
+            "created_at": "2026-11-09T00:48:10.213+00:00",
+            "updated_at": "2026-11-09T00:48:10.213+00:00"
+          },
+          {
+            "id": 7,
+            "project_id": 1,
+            "title": "done-low",
+            "status": "done",
+            "priority": "low",
+            "assignee_id": 2,
+            "due_date": "2030-01-15",
+            "archived": false,
+            "revision": 1,
+            "created_by": 2,
+            "created_at": "2026-11-09T00:48:10.216+00:00",
+            "updated_at": "2026-11-09T00:48:10.216+00:00"
+          },
+          {
+            "id": 8,
+            "project_id": 1,
+            "title": "done-normal",
+            "status": "done",
+            "priority": "normal",
+            "assignee_id": 2,
+            "due_date": "2030-01-15",
+            "archived": false,
+            "revision": 1,
+            "created_by": 2,
+            "created_at": "2026-11-09T00:48:10.218+00:00",
+            "updated_at": "2026-11-09T00:48:10.218+00:00"
+          }
+        ],
+        "next_cursor": null
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/projects/1/tasks?archived=true",
+      "json": {
+        "items": [
+          {
+            "id": 9,
+            "project_id": 1,
+            "title": "done-high",
+            "status": "done",
+            "priority": "high",
+            "assignee_id": 2,
+            "due_date": "2030-01-15",
+            "archived": true,
+            "revision": 2,
+            "created_by": 2,
+            "created_at": "2026-11-09T00:48:10.221+00:00",
+            "updated_at": "2026-11-09T00:48:10.226+00:00"
+          }
+        ],
+        "next_cursor": null
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/tasks/1/comments",
+      "json": {
+        "items": [
+          {
+            "id": 1,
+            "task_id": 1,
+            "body": "Retained disabled authorship",
+            "author_id": 2,
+            "created_at": "2026-11-09T00:48:10.229+00:00"
+          }
+        ],
+        "next_cursor": null
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/tasks/1",
+      "json": {
+        "id": 1,
+        "project_id": 1,
+        "title": "Revision two",
+        "description": "Full retained description 🌍",
+        "status": "todo",
+        "priority": "low",
+        "assignee_id": 2,
+        "due_date": "2030-01-15",
+        "archived": false,
+        "revision": 2,
+        "created_by": 2,
+        "created_at": "2026-11-09T00:48:10.200+00:00",
+        "updated_at": "2026-11-09T00:48:10.224+00:00"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/tasks/2",
+      "json": {
+        "id": 2,
+        "project_id": 1,
+        "title": "todo-normal",
+        "description": "Full retained description 🌍",
+        "status": "todo",
+        "priority": "normal",
+        "assignee_id": 2,
+        "due_date": "2030-01-15",
+        "archived": false,
+        "revision": 1,
+        "created_by": 2,
+        "created_at": "2026-11-09T00:48:10.202+00:00",
+        "updated_at": "2026-11-09T00:48:10.202+00:00"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/tasks/3",
+      "json": {
+        "id": 3,
+        "project_id": 1,
+        "title": "todo-high",
+        "description": "Full retained description 🌍",
+        "status": "todo",
+        "priority": "high",
+        "assignee_id": 2,
+        "due_date": "2030-01-15",
+        "archived": false,
+        "revision": 1,
+        "created_by": 2,
+        "created_at": "2026-11-09T00:48:10.205+00:00",
+        "updated_at": "2026-11-09T00:48:10.205+00:00"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/tasks/4",
+      "json": {
+        "id": 4,
+        "project_id": 1,
+        "title": "doing-low",
+        "description": "Full retained description 🌍",
+        "status": "doing",
+        "priority": "low",
+        "assignee_id": 2,
+        "due_date": "2030-01-15",
+        "archived": false,
+        "revision": 1,
+        "created_by": 2,
+        "created_at": "2026-11-09T00:48:10.208+00:00",
+        "updated_at": "2026-11-09T00:48:10.208+00:00"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/tasks/5",
+      "json": {
+        "id": 5,
+        "project_id": 1,
+        "title": "doing-normal",
+        "description": "Full retained description 🌍",
+        "status": "doing",
+        "priority": "normal",
+        "assignee_id": 2,
+        "due_date": "2030-01-15",
+        "archived": false,
+        "revision": 1,
+        "created_by": 2,
+        "created_at": "2026-11-09T00:48:10.210+00:00",
+        "updated_at": "2026-11-09T00:48:10.210+00:00"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/tasks/6",
+      "json": {
+        "id": 6,
+        "project_id": 1,
+        "title": "doing-high",
+        "description": "Full retained description 🌍",
+        "status": "doing",
+        "priority": "high",
+        "assignee_id": 2,
+        "due_date": "2030-01-15",
+        "archived": false,
+        "revision": 1,
+        "created_by": 2,
+        "created_at": "2026-11-09T00:48:10.213+00:00",
+        "updated_at": "2026-11-09T00:48:10.213+00:00"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/tasks/7",
+      "json": {
+        "id": 7,
+        "project_id": 1,
+        "title": "done-low",
+        "description": "Full retained description 🌍",
+        "status": "done",
+        "priority": "low",
+        "assignee_id": 2,
+        "due_date": "2030-01-15",
+        "archived": false,
+        "revision": 1,
+        "created_by": 2,
+        "created_at": "2026-11-09T00:48:10.216+00:00",
+        "updated_at": "2026-11-09T00:48:10.216+00:00"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/tasks/8",
+      "json": {
+        "id": 8,
+        "project_id": 1,
+        "title": "done-normal",
+        "description": "Full retained description 🌍",
+        "status": "done",
+        "priority": "normal",
+        "assignee_id": 2,
+        "due_date": "2030-01-15",
+        "archived": false,
+        "revision": 1,
+        "created_by": 2,
+        "created_at": "2026-11-09T00:48:10.218+00:00",
+        "updated_at": "2026-11-09T00:48:10.218+00:00"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/tasks/9",
+      "json": {
+        "id": 9,
+        "project_id": 1,
+        "title": "done-high",
+        "description": "Full retained description 🌍",
+        "status": "done",
+        "priority": "high",
+        "assignee_id": 2,
+        "due_date": "2030-01-15",
+        "archived": true,
+        "revision": 2,
+        "created_by": 2,
+        "created_at": "2026-11-09T00:48:10.221+00:00",
+        "updated_at": "2026-11-09T00:48:10.226+00:00"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/users",
+      "json": {
+        "items": [
+          {
+            "id": 1,
+            "username": "admin",
+            "display_name": "Administrator",
+            "role": "admin",
+            "active": true
+          },
+          {
+            "id": 2,
+            "username": "alice",
+            "display_name": "Alice",
+            "role": "member",
+            "active": false
+          },
+          {
+            "id": 3,
+            "username": "bob",
+            "display_name": "Bob",
+            "role": "member",
+            "active": true
+          }
+        ],
+        "next_cursor": null
+      }
+    }
+  ],
+  "details": [
+    {
+      "actor": "admin",
+      "path": "/api/projects/1",
+      "json": {
+        "id": 1,
+        "name": "Current project",
+        "description": "Retained complete project ☃",
+        "archived": false,
+        "created_by": 2,
+        "created_at": "2026-11-09T00:48:10.191+00:00",
+        "updated_at": "2026-11-09T00:48:10.191+00:00"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/projects/2",
+      "json": {
+        "id": 2,
+        "name": "Archived project",
+        "description": "Historical project body",
+        "archived": true,
+        "created_by": 2,
+        "created_at": "2026-11-09T00:48:10.194+00:00",
+        "updated_at": "2026-11-09T00:48:10.197+00:00"
+      }
+    }
+  ],
+  "rejections": [
+    {
+      "actor": "admin",
+      "method": "PATCH",
+      "path": "/api/tasks/1",
+      "json": {
+        "title": "Stale must not replace",
+        "expected_revision": 1
+      },
+      "status": 409
+    }
+  ],
+  "blobs": {}
+}

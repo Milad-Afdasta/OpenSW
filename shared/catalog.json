@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "apps": [
+    {"id": "files", "name": "OpenSW Files", "description": "Your team's files, on your terms.", "port": 8081},
+    {"id": "projects", "name": "OpenSW Projects", "description": "A clear place to move work forward.", "port": 8082},
+    {"id": "notes", "name": "OpenSW Notes", "description": "A simple home for what your team knows.", "port": 8083},
+    {"id": "chat", "name": "OpenSW Chat", "description": "Team conversations without the clutter.", "port": 8084}
+  ],
+  "task_statuses": [
+    {"id": "todo", "label": "To do"},
+    {"id": "doing", "label": "In progress"},
+    {"id": "done", "label": "Done"}
+  ],
+  "task_priorities": [
+    {"id": "low", "label": "Low"},
+    {"id": "normal", "label": "Normal"},
+    {"id": "high", "label": "High"}
+  ]
+}

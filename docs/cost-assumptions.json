@@ -1,0 +1,74 @@
+{
+  "checked_on": "2026-11-08",
+  "currency": "USD",
+  "paid_seats": 50,
+  "reference_plans": [
+    {
+      "name": "Dropbox Standard",
+      "per_seat_month": 15,
+      "billing": "Annual billing",
+      "source": "https://www.dropbox.com/plans?trigger=homepagefoot"
+    },
+    {
+      "name": "Jira Standard",
+      "per_seat_month": 9.7,
+      "billing": "Monthly billing, first 100 users",
+      "source": "https://www.atlassian.com/licensing/future-pricing/cloud/list/faqs"
+    },
+    {
+      "name": "Notion Plus",
+      "per_seat_month": 10,
+      "billing": "Annual billing",
+      "source": "https://www.notion.com/pricing",
+      "billing_source": "https://www.notion.com/releases/2024-06-26"
+    },
+    {
+      "name": "Slack Pro",
+      "per_seat_month": 7.25,
+      "billing": "Annual billing",
+      "source": "https://slack.com/pricing"
+    }
+  ],
+  "illustrative_hosting_month": {
+    "server": 48,
+    "local_storage_and_workspace": 50,
+    "backup_repository_capacity_budget": 4
+  },
+  "hosting_sources": {
+    "server": "https://www.digitalocean.com/pricing/droplets",
+    "local_storage_and_workspace": "https://www.digitalocean.com/pricing/volumes",
+    "backup_repository_capacity_budget": "https://www.backblaze.com/cloud-storage/pricing"
+  },
+  "admin_hours_month": 2,
+  "admin_hourly_rate": 75,
+  "limits": [
+    "A paid-plan spending example, not equivalent product capabilities or storage allocations.",
+    "The server is in a similar CPU/memory class to the controlled fixture, not a measured provider capacity guarantee.",
+    "The local storage budget assumes at most 100 GiB total app data, with approximately 3 times the snapshot size available as free verification workspace, plus growth margin.",
+    "The 500 GiB remote repository budget is capacity for retained encrypted snapshots, not unlimited history or a promise to back up 500 GiB of live data.",
+    "Operators must make the budgeted storage available to Docker app and backup volumes and monitor actual usage.",
+    "Taxes, migration, setup, extra transfer, domains, additional retention, and growth are excluded.",
+    "Five-year chart holds seats, prices, storage, workload, and admin effort constant; it is a scenario, not a forecast.",
+    "Free commercial plans, bundles, discounts, and existing hardware change the calculation.",
+    "No paid provider account was created for this illustration."
+  ],
+  "illustrative_server": {
+    "name": "DigitalOcean Basic",
+    "vcpus": 4,
+    "memory_gib": 8,
+    "included_ssd_gib": 160
+  },
+  "storage_assumptions": {
+    "local_volume_gib": 500,
+    "maximum_total_app_data_gib": 100,
+    "verification_free_workspace_multiplier": 3,
+    "remote_repository_capacity_gib": 500,
+    "b2_starting_rate_usd_per_tb_month": 6.95
+  },
+  "controlled_test_comparison": {
+    "cpu_limit": 4,
+    "memory_gib": 6,
+    "scope": "Controlled fixture resource class, not a benchmark of the referenced provider plan."
+  },
+  "scenario_years": 5
+}
